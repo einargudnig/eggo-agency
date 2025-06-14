@@ -2,7 +2,6 @@
 import { Image } from "astro:assets";
 import Facebook from "../../assets/facebook.svg";
 import Linkedin from "../../assets/linkedin.svg";
-import Logo from "../../assets/logo-alt.svg";
 import Twitter from "../../assets/twitter.svg";
 import ShortForm from "../ui/ShortForm.astro";
 
@@ -13,11 +12,8 @@ const logos = [
 ];
 
 const links = [
-  { name: "About us", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Use Cases", href: "#cases" },
-  { name: "Pricing", href: "#Testimonials" },
-  { name: "Blog", href: "#Home" },
+  { name: "Þjónusta", href: "#services" },
+  { name: "Verð", href: "#Testimonials" },
 ];
 ---
 
@@ -32,7 +28,8 @@ const links = [
         >
           <picture>
             <a href="#home">
-              <Image src={Logo} alt="Logo for Kreatif Brand" />
+              <!-- <Image src={Logo} alt="Logo for Kreatif Brand" /> -->
+              <p class="text-2xl"><span class="font-bold">G</span>ar<span class="font-bold">E</span>inar <span class="font-bold">O</span>li agency</p>
             </a>
           </picture>
           <ul class="flex flex-col sm:flex-row gap-5">
@@ -67,59 +64,17 @@ const links = [
 
         <div class="flex flex-col lg:flex-row mt-[66px] mb-[51px]">
           <div
-            class="flex text-center lg:text-start flex-col w-full lg:w-[30%]"
+            class="flex text-center lg:text-start flex-col w-full"
           >
-            <h3 class="mb-5 text-center md:text-left text-2xl text-green">Contact us</h3>
-            <div class="flex flex-col justify-between gap-4">
-              <span> Email: examplemail.com </span>
-              <span> Phone: +123 456 789 </span>
-              <span class="lg:w-3/4">
-                Address: 1234 Street Name, City Name, Country Name
-              </span>
-            </div>
-          </div>
-          <div class="flex-grow my-10 lg:my-0 lg:ml-12">
-            <ShortForm />
+            <h3 class="mb-5 text-center md:text-left text-2xl text-green">Hafðu Samband</h3>
+            <div class="flex justify-between items-center">
+                <div class="flex flex-col justify-between gap-4">
+                    <span> Netfang: einargudni@eggo.is / gardaroli@eggo.is </span>
+                    <span> Sími:  123-4567 / 987-1234 </span>
+                </div>
+                <ShortForm />
+            </div
           </div>
         </div>
       </div>
-
-      <div class="h-[1px] bg-gray mb-5"></div>
-      <div
-        class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
-      >
-        <span
-          >2024 Positivus - Made With <a
-            class="underline"
-            target="_blank"
-            href="https://astro.build">Astro</a
-          > by 
-          <a 
-          class="underline"
-          target="_blank"
-          href="https://manulthanura.com">Manul</a
-          ></span
-        >&nbsp
-        <span>
-          Credits (
-          <a
-            href="https://www.olgaskuja.design/"
-            target="_blank"
-            class="underline">Olga</a
-          >,
-          <a
-            href="https://esteban-vasquez.netlify.app/"
-            target="_blank"
-            class="underline">Esteban</a
-          >)
-          <span> &</span>
-          <a
-            class="underline"
-            href="https://creativecommons.org/licenses/by/4.0/"
-            target="_blank">Licence</a
-          >
-        </span>
-      </div>
-    </div>
-  </div>
 </section>
