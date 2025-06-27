@@ -1,13 +1,12 @@
 /* empty css                                 */
-import { a as createComponent, m as maybeRenderHead, d as renderComponent, h as renderScript, b as renderTemplate, e as addAttribute } from '../chunks/astro/server_BwzKAyNM.mjs';
+import { a as createComponent, m as maybeRenderHead, d as renderComponent, h as renderScript, b as renderTemplate } from '../chunks/astro/server_BwzKAyNM.mjs';
 import 'kleur/colors';
 import '../chunks/index_CCxZAn8N.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_yQes_i3g.mjs';
 /* empty css                                 */
-import { b as $$Section, c as $$SectionTitle, $ as $$Sponsors, a as $$Services } from '../chunks/Services_CDPa-NNR.mjs';
-import { c as createSvgComponent, $ as $$MainLayout } from '../chunks/MainLayout_DuXfDLLt.mjs';
+import { b as $$Section, c as $$SectionTitle, $ as $$Sponsors, a as $$Services } from '../chunks/Services_BIqp58D1.mjs';
+import { c as createSvgComponent, $ as $$MainLayout } from '../chunks/MainLayout_DwK04bkb.mjs';
 import { $ as $$Card } from '../chunks/Card_BBsY7RBB.mjs';
-import { p as priceData } from '../chunks/priceDats_BxtyddHQ.mjs';
 export { renderers } from '../renderers.mjs';
 
 const decorForm = new Proxy({"src":"/_astro/contact-pic.BrB0SfUf.png","width":692,"height":649,"format":"png"}, {
@@ -38,10 +37,6 @@ const $$Hero = createComponent(($$result, $$props, $$slots) => {
 </a> </div> </div> </div> <div class="flex items-center py-5 md:w-6/12 md:pb-20 md:pt-10"> ${renderComponent($$result2, "Image", $$Image, { "src": HeroIlust, "alt": "Hero Ilustration", "loading": "eager" })} </div> </div> ` })}`;
 }, "/Users/einargudjonsson/personal/eggo-agency/src/components/sections/Hero.astro", void 0);
 
-const $$PricingCard = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${renderComponent($$result, "Section", $$Section, { "id": "pricing" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="mb-[140px] relative"> ${renderComponent($$result2, "SectionTitle", $$SectionTitle, { "sectionTitle": "Ver\xF0", "description": "Vi\xF0 bj\xF3\xF0um upp \xE1 einfalt ver\xF0 fyrir \xFE\xEDnar \xFEarfir" })} <div class="flex items-center justify-center"> ${priceData.map((item) => renderTemplate`${renderComponent($$result2, "Card", $$Card, { "isUnderline": true }, { "default": ($$result3) => renderTemplate` <div class="flex flex-col p-6 mx-auto max-w-lg text-center"> <h3 class="mb-4 text-2xl font-semibold">${item.title}</h3> <p class="font-light text-gray-500 sm:text-lg">${item.description}</p> <div class="flex justify-center items-baseline my-8"> <span class="mr-2 text-5xl font-extrabold">$${item.price}</span> <span class="text-gray-500">/month</span> </div> <!-- List --> <ul role="list" class="mb-8 space-y-4 text-left"> <li class="flex items-center space-x-3"> <!-- Icon --> <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <span>Individual configuration</span> </li> <li class="flex items-center space-x-3"> <!-- Icon --> <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <span>No setup, or hidden fees</span> </li> <li class="flex items-center space-x-3"> <!-- Icon --> <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <span>Team size: <span class="font-semibold">${item.devCount}</span></span> </li> <li class="flex items-center space-x-3"> <!-- Icon --> <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <span>Premium support: <span class="font-semibold">${item.support}</span></span> </li> <li class="flex items-center space-x-3"> <!-- Icon --> <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <span>Free updates: <span class="font-semibold">${item.update}</span></span> </li> </ul> <a${addAttribute(item.link, "href")} class="text-black hover:text-white bg-green hover:bg-black focus:ring-4 focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">${item.action}</a> </div> ` })}`)} </div> </div> ` })}`;
-}, "/Users/einargudjonsson/personal/eggo-agency/src/components/ui/PricingCard.astro", void 0);
-
 const propImg = new Proxy({"src":"/_astro/proposal-pic.DC7YnBHg.png","width":494,"height":395,"format":"png"}, {
 						get(target, name, receiver) {
 							if (name === 'clone') {
@@ -64,7 +59,7 @@ Hafðu samband í dag og lærðu meira um þjónusturnar sem
 }, "/Users/einargudjonsson/personal/eggo-agency/src/components/sections/Proposal.astro", void 0);
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "title": "Positivus", "description": "A beautiful and functional landing page design created specifically for digital marketing agencies. With its clean and modern design, Positivus is the perfect template to showcase your agency's services and case studies to potential clients. Built with astro and tailwindcss" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Hero", $$Hero, {})} ${renderComponent($$result2, "Sponsors", $$Sponsors, {})} ${renderComponent($$result2, "Services", $$Services, {})} ${renderComponent($$result2, "Proposal", $$Proposal, {})} ${renderComponent($$result2, "PricingCard", $$PricingCard, {})} ${renderComponent($$result2, "Contact", $$Contact, {})} ` })}`;
+  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "title": "EGG\xD3", "description": "\xDEa\xF0 er mikilv\xE6gt a\xF0 taka \xFE\xE1tt \xE1 internetinu \xED dag. Vi\xF0 hj\xE1lpum \xFE\xE9r me\xF0 allt sem tengist \xFEv\xED og komum \xFE\xE9r \xE1 framf\xE6ri." }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Hero", $$Hero, {})} ${renderComponent($$result2, "Sponsors", $$Sponsors, {})} ${renderComponent($$result2, "Services", $$Services, {})} ${renderComponent($$result2, "Proposal", $$Proposal, {})} ${renderComponent($$result2, "Contact", $$Contact, {})} ` })}`;
 }, "/Users/einargudjonsson/personal/eggo-agency/src/pages/index.astro", void 0);
 
 const $$file = "/Users/einargudjonsson/personal/eggo-agency/src/pages/index.astro";
