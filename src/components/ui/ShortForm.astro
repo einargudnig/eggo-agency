@@ -1,16 +1,108 @@
+---
+export const prerender = false; // Not needed in 'server' mode
+
+const errors = { firstName: "", email: "" };
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const firstName = data.get("firstName");
+    const email = data.get("email");
+    console.log(firstName, email)
+
+    if (typeof firstName !== "string" || firstName.length < 1) {
+         errors.firstName += "Please enter a name. ";
+    }
+
+    // Simple email regex for basic validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (typeof email !== "string" || !emailRegex.test(email)) {
+      errors.email += "Please enter a valid email address. ";
+    }
+
+    const hasErrors = Object.values(errors).some(msg => msg)
+    if (!hasErrors) {
+      // await registerUser({name, email, password});
+      console.log("Added to audience!")
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+<div>
 <form
   class="bg-[#292A32] px-8 py-7 rounded-[14px] gap-5 h-full flex flex-col sm:flex-row items-center justify-center"
+  method="POST"
 >
   <div class="w-full sm:w-[55%]">
     <input
       type="text"
+      id="firstName"
+      name="firstName"
+      placeholder="Nafn"
+      class="bg-transparent w-full px-[35px] py-5 border rounded-[14px] focus:outline-none mb-3"
+    />
+    {errors.firstName && <p>{errors.firstName}</p>}
+
+
+    <input
+      type="email"
       id="email"
       name="email"
       placeholder="Netfang"
       class="bg-transparent w-full px-[35px] py-5 border rounded-[14px] focus:outline-none"
     />
+    {errors.email && <p>{errors.email}</p>}
   </div>
   <button type="submit" name="submit" class="w-full sm:w-[45%] btn-tertiary"
     >Fylgjast með</button
   >
 </form>
+
+<div id="message" class="message"></div>
+</div>
+
+<!-- <script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const messageDiv = document.getElementById('message') as HTMLDivElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {
+      email: formData.get('email') as string,
+      firstName: formData.get('firstName') as string,
+      lastName: formData.get('lastName') as string,
+    };
+
+    try {
+      messageDiv.textContent = 'Adding contact...';
+      messageDiv.className = 'message loading';
+
+      const response = await fetch('/api/add-contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+              messageDiv.textContent = 'Successfully subscribed!';
+              messageDiv.className = 'message success';
+              form.reset();
+            } else {
+              messageDiv.textContent = result.error || 'Failed to subscribe';
+              messageDiv.className = 'message error';
+            }
+      } catch (error) {
+        messageDiv.textContent = 'Network error. Please try again.';
+        messageDiv.className = 'message error';
+      }
+    });
+</script> -->
