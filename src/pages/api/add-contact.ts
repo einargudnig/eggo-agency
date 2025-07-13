@@ -34,6 +34,15 @@ export const POST: APIRoute = async ({ request }) => {
       audienceId: import.meta.env.AUDIENCE_ID,
     });
 
+    // Send email to user
+    const confirmation = await resend.emails.send({
+      from: "eggo@eggo.is",
+      to: emailStr,
+      subject: "Takk!",
+      html: "<p>Takk fyrir að skrá þig</p>",
+      // react: <NewsletterConfirm firstName={firstNameStr} />,
+    });
+
     return new Response(JSON.stringify({ success: true, contact }), {
       status: 200,
       headers: { "Content-Type": "application/json" },

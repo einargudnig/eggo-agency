@@ -29,31 +29,33 @@ export default function AudienceForm() {
   }
 
   return (
-    <form
-      onSubmit={submit}
-      className="bg-[#292A32] px-8 py-7 rounded-[14px] gap-5 h-full flex flex-col sm:flex-row items-center justify-center"
-    >
-      <div className="w-full sm:w-[55%]">
-        <input
-          type="text"
-          id="firstName"
-          name="firstName"
-          placeholder="Nafn"
-          required
-          className="bg-transparent w-full px-[35px] py-5 border rounded-[14px] focus:outline-none mb-3"
-        />
+    <div>
+      <form
+        onSubmit={submit}
+        className="bg-[#292A32] px-8 py-7 rounded-[14px] gap-5 h-full flex flex-col sm:flex-row items-center justify-center"
+      >
+        <div className="w-full sm:w-[55%]">
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Nafn"
+            required
+            className="bg-transparent w-full px-[35px] py-5 border rounded-[14px] focus:outline-none mb-3"
+          />
 
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Netfang"
-          required
-          className="bg-transparent w-full px-[35px] py-5 border rounded-[14px] focus:outline-none"
-        />
-      </div>
-      <button className="w-full sm:w-[45%] btn-tertiary">Fylgjast með</button>
-      {responseMessage && <p>{responseMessage}</p>}
-    </form>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Netfang"
+            required
+            className="bg-transparent w-full px-[35px] py-5 border rounded-[14px] focus:outline-none"
+          />
+        </div>
+        <button className="w-full sm:w-[45%] btn-tertiary">Fylgjast með</button>
+      </form>
+      {responseMessage && <p className="mt-2">{responseMessage}</p>}
+    </div>
   );
 }
