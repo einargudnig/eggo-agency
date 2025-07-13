@@ -4,12 +4,14 @@ import Navbar from "../components/ui/Navbar.astro";
 import MainHead from "./MainHead.astro";
 import Analytics from '@vercel/analytics/astro'
 import "../styles/global.css";
+import PostHog from "../components/posthog.astro";
 
 const { ...props } = Astro.props;
 ---
 
 <html lang="en">
   <MainHead {...props} />
+  <PostHog />
   <style>
     html.lenis {
       height: auto;
