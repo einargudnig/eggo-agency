@@ -5,22 +5,31 @@ const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
 export const POST: APIRoute = async ({ request }) => {
   try {
-    const body = await request.json();
-    const { email, firstName } = body;
-    console.log(email, firstName);
+    const data = await request.formData();
+    const firstName = data.get("firstName");
+    const email = data.get("email");
+
+    // Ensure values are strings (not File)
+    const firstNameStr = typeof firstName === "string" ? firstName : undefined;
+    const emailStr = typeof email === "string" ? email : undefined;
+
+    console.log(emailStr, firstNameStr);
 
     // Validate required fields
-    if (!email) {
-      return new Response(JSON.stringify({ error: "Email is required" }), {
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      });
+    if (!emailStr || !firstNameStr) {
+      return new Response(
+        JSON.stringify({ error: "Email and name are required" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json" },
+        },
+      );
     }
 
     // Add contact to Resend audience
     const contact = await resend.contacts.create({
-      email,
-      firstName: firstName || "",
+      firstName: firstNameStr,
+      email: emailStr,
       unsubscribed: false,
       audienceId: import.meta.env.AUDIENCE_ID,
     });

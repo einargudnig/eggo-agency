@@ -3,7 +3,8 @@ import { Image } from "astro:assets";
 import Facebook from "../../assets/facebook.svg";
 import Linkedin from "../../assets/linkedin.svg";
 import Twitter from "../../assets/twitter.svg";
-import ShortForm from "../ui/ShortForm.astro";
+// import ShortForm from "../ui/ShortForm.astro";
+import AudienceForm from "./AudienceForm";
 
 const logos = [
   { name: "Facebook", src: Facebook, link: "https://facebook.com" },
@@ -72,8 +73,9 @@ const links = [
                     <span> Netfang: eg@eggo.is / go@eggo.is </span>
                     <!-- <span> Sími:  123-4567 / 987-1234 </span> -->
                 </div>
-                <ShortForm />
-            </div
+                <!-- <ShortForm /> -->
+                <AudienceForm client:load/>
+            </div>
           </div>
         </div>
       </div>
