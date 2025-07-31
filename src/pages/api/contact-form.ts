@@ -6,7 +6,7 @@ const resend = new Resend(import.meta.env.RESEND_API_KEY);
 export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.formData();
-    const name = data.get("firstName");
+    const name = data.get("name");
     const email = data.get("email");
     const message = data.get("message");
 
@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Add contact to Resend audience
     const response = await resend.emails.send({
-      from: emailStr,
+      from: "contact@eggo.is",
       to: "eggo@eggo.is",
       subject: "Contact Form Submission",
       html: `<p>Name: ${nameStr}</p><p>Email: ${emailStr}</p><p>Message: ${messageStr}</p>`,
