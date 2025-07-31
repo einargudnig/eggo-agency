@@ -21,7 +21,9 @@ export default function ContactForm() {
     if (data.message) {
       setResponseMessage(data.message);
     } else if (data.success) {
-      setResponseMessage("Takk fyrir fyrir að hafa samband!");
+      setResponseMessage(
+        "Takk fyrir fyrir að hafa samband! Við munum svara þér í tölvupósti",
+      );
       // Clear the form
       formRef.current?.reset();
     } else if (data.error) {
