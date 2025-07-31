@@ -14,7 +14,10 @@ export default defineConfig({
   site: "https://eggo.is",
   integrations: [tailwind(), react()],
   output: "server",
-  adapter: node({
-    mode: "standalone",
+  // adapter: node({
+  //   mode: "standalone",
+  // }),
+  adapter: vercel({
+    functionPerRoute: true, // This is optional but might help with the deployment
   }),
 });
