@@ -28,6 +28,14 @@
 			"dest": "_render"
 		},
 		{
+			"src": "^/api/add-contact/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/api/contact-form/?$",
+			"dest": "_render"
+		},
+		{
 			"src": "^/pricing/?$",
 			"dest": "_render"
 		},

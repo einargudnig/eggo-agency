@@ -1,8 +1,3 @@
 {
-  "version": 2,
-  "functions": {
-    "_render": {
-      "runtime": "nodejs22.x"
-    }
-  }
+  "version": 2
 }
