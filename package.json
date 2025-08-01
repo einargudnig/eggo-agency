@@ -3,12 +3,13 @@
   "type": "module",
   "version": "0.0.1",
   "engines": {
-    "node": "20.x"
+    "node": "^20.0.0"
   },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
+    "vercel-build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

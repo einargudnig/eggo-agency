@@ -15,6 +15,7 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     },
+    functionPerRoute: false, // Add this line
   }),
   output: "server",
 });

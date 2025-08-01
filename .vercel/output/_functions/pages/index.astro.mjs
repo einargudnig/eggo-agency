@@ -1,13 +1,13 @@
 /* empty css                                 */
-import { a as createComponent, d as renderComponent, b as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_YQIAy__s.mjs';
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_yhdBXd1h.mjs';
 import 'kleur/colors';
 import { jsxs, jsx } from 'react/jsx-runtime';
 import { useState, useRef } from 'react';
-import { b as $$Section, c as $$SectionTitle, $ as $$Sponsors, a as $$Services } from '../chunks/Services_CJQXqCF-.mjs';
-import '../chunks/index_CCxZAn8N.mjs';
-import { $ as $$Image } from '../chunks/_astro_assets_BgDhRsUf.mjs';
-import { c as createSvgComponent, $ as $$MainLayout } from '../chunks/MainLayout_4A6PbgmQ.mjs';
-import { $ as $$Card } from '../chunks/Card_CpjlBadf.mjs';
+import { b as $$Section, c as $$SectionTitle, $ as $$Sponsors, a as $$Services } from '../chunks/Services_B2YT1pvH.mjs';
+import '../chunks/index_CVC0tT_4.mjs';
+import { $ as $$Image } from '../chunks/_astro_assets_BEpDXQf0.mjs';
+import { c as createSvgComponent, $ as $$MainLayout } from '../chunks/MainLayout_Bw-gbheO.mjs';
+import { $ as $$Card } from '../chunks/Card_CNZfM7M1.mjs';
 export { renderers } from '../renderers.mjs';
 
 const decorForm = new Proxy({"src":"/_astro/contact-pic.BrB0SfUf.png","width":692,"height":649,"format":"png"}, {
